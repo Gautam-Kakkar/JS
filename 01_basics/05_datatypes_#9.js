@@ -12,7 +12,7 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 // const bigNumber = 3456543576654356754n
 
@@ -32,6 +32,25 @@ const myFunction = function(){
     console.log("Hello world");
 }
 
-console.log(typeof anotherId);
+// console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//memory in js is stack and heap
+/*stack (primitive) gives copy
+heap(non primitive) gives reference*/
+
+let userOne={
+    email:"gautam2821kakkar@gmail.com",
+    upi: "8527895953@ibl"
+}
+
+let userTwo=userOne
+
+userTwo.email="igautamkakkar@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
